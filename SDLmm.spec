@@ -2,7 +2,7 @@ Summary:	C++ glue to SDL (Simple DirectMedia Layer)
 Summary(pl):	Interfejs C++ do SDL
 Name:		SDLmm
 Version:	0.1.8
-Release:	4
+Release:	5
 License:	LGPL
 Group:		X11/Libraries
 Source0:	http://dl.sourceforge.net/sdlmm/%{name}-%{version}.tar.bz2
