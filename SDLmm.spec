@@ -4,17 +4,20 @@ Name:		SDLmm
 Version:	0.1.8
 Release:	1
 License:	LGPL
-Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
+Group:		X11/Libraries
+Group(de):	X11/Libraries
+Group(es):	X11/Bibliotecas
+Group(fr):	X11/Librairies
+Group(pl):	X11/Biblioteki
+Group(pt_BR):	X11/Bibliotecas
+Group(ru):	X11/Библиотеки
+Group(uk):	X11/Б╕бл╕отеки
 Source0:	http://prdownloads.sourceforge.net/sdlmm/%{name}-%{version}.tar.bz2
 URL:		http://sdlmm.sourceforge.net/
 BuildRequires:	SDL-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -32,14 +35,14 @@ wci╠© bЙd╠c w skЁadni (i w nazewnictwie) blisko SDL.
 %package devel
 Summary:	Header files and more to develop SDLmm applications
 Summary(pl):	Pliki nagЁСwkowe do rozwijania aplikacji u©ywaj╠cych SDLmm
-Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
+Group:		X11/Development/Libraries
+Group(de):	X11/Entwicklung/Libraries
+Group(es):	X11/Desarrollo/Bibliotecas
+Group(fr):	X11/Development/Librairies
+Group(pl):	X11/Programowanie/Biblioteki
+Group(pt_BR):	X11/Desenvolvimento/Bibliotecas
+Group(ru):	X11/Разработка/Библиотеки
+Group(uk):	X11/Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 Requires:	SDL-devel
 
@@ -52,14 +55,14 @@ Pliki nagЁСwkowe do rozwijania aplikacji u©ywaj╠cych SDLmm.
 %package static
 Summary:	Static SDLmm libraries
 Summary(pl):	Statyczne biblioteki SDLmm
-Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
+Group:		X11/Development/Libraries
+Group(de):	X11/Entwicklung/Libraries
+Group(es):	X11/Desarrollo/Bibliotecas
+Group(fr):	X11/Development/Librairies
+Group(pl):	X11/Programowanie/Biblioteki
+Group(pt_BR):	X11/Desenvolvimento/Bibliotecas
+Group(ru):	X11/Разработка/Библиотеки
+Group(uk):	X11/Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
@@ -72,15 +75,20 @@ Statyczne biblioteki SDL_image.
 %setup -q 
 
 %build
+rm -f missing
+libtoolize --copy --force
 aclocal
-automake -a
 autoconf
+automake -a -c
 %configure 
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	m4datadir=%{_aclocaldir}
 
 gzip -9nf NEWS README THANKS AUTHORS
 
@@ -100,7 +108,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc docs/html/*.html docs/html/*.gif docs/html/*.css
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so
-%{_includedir}/SDLmm/*
+%{_includedir}/SDLmm
 %{_aclocaldir}/*
 %{_mandir}/man3/*
 
