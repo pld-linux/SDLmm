@@ -14,7 +14,6 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 This is a C++ glue to SDL (Simple DirectMedia Layer) library- a
 low-level, cross-platform multimedia library. SDLmm will utilize C++
