@@ -50,7 +50,7 @@ Statis SDL_image libraries.
 Statyczne biblioteki SDL_image.
 
 %prep
-%setup -q 
+%setup -q
 
 %build
 rm -f missing
@@ -58,7 +58,7 @@ rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure 
+%configure
 %{__make}
 
 %install
