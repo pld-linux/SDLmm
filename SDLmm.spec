@@ -29,7 +29,7 @@ features while still being close to SDL in syntax (and naming).
 
 %description -l pl
 Jest to ³±cznik miêdzy C++ a SDL (Simple DirectMedia Layer),
-niskopoziomow± bibliotek± multimedialn±. SDLmm wyko¿ysta cechy C++
+niskopoziomow± bibliotek± multimedialn±. SDLmm wykorzysta cechy C++
 wci±¿ bêd±c w sk³adni (i w nazewnictwie) blisko SDL.
 
 %package devel
