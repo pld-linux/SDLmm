@@ -2,7 +2,7 @@ Summary:	C++ glue to SDL (Simple DirectMedia Layer)
 Summary(pl):	Interfejs C++ do SDL
 Name:		SDLmm
 Version:	0.1.8
-Release:	3
+Release:	4
 License:	LGPL
 Group:		X11/Libraries
 Source0:	http://prdownloads.sourceforge.net/sdlmm/%{name}-%{version}.tar.bz2
@@ -70,8 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	m4datadir=%{_aclocaldir}
 
-gzip -9nf NEWS README THANKS AUTHORS
-
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
@@ -80,7 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc NEWS README THANKS AUTHORS
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
