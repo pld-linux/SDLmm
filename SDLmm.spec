@@ -53,12 +53,12 @@ Statyczne biblioteki SDL_image.
 %setup -q
 
 %build
-rm -f missing
-%{__libtoolize}
-%{__aclocal}
-%{__autoconf}
-%{__automake}
-%configure
+#rm -f missing
+#%{__libtoolize}
+#%{__aclocal}
+#%{__autoconf}
+#%{__automake}
+%configure2_13
 %{__make}
 
 %install
