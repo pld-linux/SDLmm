@@ -2,7 +2,7 @@ Summary:	C++ glue to SDL (Simple DirectMedia Layer)
 Summary(pl):	Interfejs C++ do SDL
 Name:		SDLmm
 Version:	0.1.8
-Release:	1
+Release:	2
 License:	LGPL
 Group:		X11/Libraries
 Group(de):	X11/Libraries
@@ -21,6 +21,7 @@ BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man1
 
 %description
 This is a C++ glue to SDL (Simple DirectMedia Layer) library- a
