@@ -5,7 +5,7 @@ Version:	0.1.8
 Release:	4
 License:	LGPL
 Group:		X11/Libraries
-Source0:	http://prdownloads.sourceforge.net/sdlmm/%{name}-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/sdlmm/%{name}-%{version}.tar.bz2
 URL:		http://sdlmm.sourceforge.net/
 BuildRequires:	SDL-devel
 BuildRequires:	autoconf
@@ -34,7 +34,7 @@ Requires:	SDL-devel
 %description devel
 Header files and more to develop SDLmm applications.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nag³ówkowe do rozwijania aplikacji u¿ywaj±cych SDLmm.
 
 %package static
@@ -46,7 +46,7 @@ Requires:	%{name}-devel = %{version}
 %description static
 Statis SDL_image libraries.
 
-%description -l pl static
+%description static -l pl
 Statyczne biblioteki SDL_image.
 
 %prep
@@ -68,11 +68,11 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	m4datadir=%{_aclocaldir}
 
-%post   -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
