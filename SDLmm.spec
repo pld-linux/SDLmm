@@ -6,6 +6,7 @@ Release:	4
 License:	LGPL
 Group:		X11/Libraries
 Source0:	http://dl.sourceforge.net/sdlmm/%{name}-%{version}.tar.bz2
+# Source0-md5:	0a05d27d1aed72af3c7a37b6378f50e5
 URL:		http://sdlmm.sourceforge.net/
 BuildRequires:	SDL-devel
 BuildRequires:	autoconf
