@@ -1,5 +1,5 @@
 Summary:	C++ glue to SDL (Simple DirectMedia Layer)
-Summary(pl.UTF-8):   Interfejs C++ do SDL
+Summary(pl.UTF-8):	Interfejs C++ do SDL
 Name:		SDLmm
 Version:	0.1.8
 Release:	6
@@ -28,7 +28,7 @@ wciąż będąc w składni (i w nazewnictwie) blisko SDL.
 
 %package devel
 Summary:	Header files and more to develop SDLmm applications
-Summary(pl.UTF-8):   Pliki nagłówkowe do rozwijania aplikacji używających SDLmm
+Summary(pl.UTF-8):	Pliki nagłówkowe do rozwijania aplikacji używających SDLmm
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	SDL-devel
@@ -42,7 +42,7 @@ Pliki nagłówkowe do rozwijania aplikacji używających SDLmm.
 
 %package static
 Summary:	Static SDLmm libraries
-Summary(pl.UTF-8):   Statyczne biblioteki SDLmm
+Summary(pl.UTF-8):	Statyczne biblioteki SDLmm
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
