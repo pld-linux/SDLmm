@@ -1,5 +1,5 @@
 Summary:	C++ glue to SDL (Simple DirectMedia Layer)
-Summary(pl):	Interfejs C++ do SDL
+Summary(pl.UTF-8):   Interfejs C++ do SDL
 Name:		SDLmm
 Version:	0.1.8
 Release:	6
@@ -21,14 +21,14 @@ This is a C++ glue to SDL (Simple DirectMedia Layer) library- a
 low-level, cross-platform multimedia library. SDLmm will utilize C++
 features while still being close to SDL in syntax (and naming).
 
-%description -l pl
-Jest to ³±cznik miêdzy C++ a SDL (Simple DirectMedia Layer),
-niskopoziomow± bibliotek± multimedialn±. SDLmm wykorzysta cechy C++
-wci±¿ bêd±c w sk³adni (i w nazewnictwie) blisko SDL.
+%description -l pl.UTF-8
+Jest to Å‚Ä…cznik miÄ™dzy C++ a SDL (Simple DirectMedia Layer),
+niskopoziomowÄ… bibliotekÄ… multimedialnÄ…. SDLmm wykorzysta cechy C++
+wciÄ…Å¼ bÄ™dÄ…c w skÅ‚adni (i w nazewnictwie) blisko SDL.
 
 %package devel
 Summary:	Header files and more to develop SDLmm applications
-Summary(pl):	Pliki nag³ówkowe do rozwijania aplikacji u¿ywaj±cych SDLmm
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe do rozwijania aplikacji uÅ¼ywajÄ…cych SDLmm
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	SDL-devel
@@ -37,19 +37,19 @@ Requires:	libstdc++-devel
 %description devel
 Header files and more to develop SDLmm applications.
 
-%description devel -l pl
-Pliki nag³ówkowe do rozwijania aplikacji u¿ywaj±cych SDLmm.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe do rozwijania aplikacji uÅ¼ywajÄ…cych SDLmm.
 
 %package static
 Summary:	Static SDLmm libraries
-Summary(pl):	Statyczne biblioteki SDLmm
+Summary(pl.UTF-8):   Statyczne biblioteki SDLmm
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Statis SDL_image libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczne biblioteki SDL_image.
 
 %prep
