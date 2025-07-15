@@ -54,7 +54,7 @@ Statyczne biblioteki SDL_image.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 # kill sinclude and copy of libtool.m4
 tail -n +3 acinclude.m4 | head -n 176 > acinclude.m4.tmp
